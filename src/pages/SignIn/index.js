@@ -1,7 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
+import * as Yup from 'yup';
 import logo from '~/assets/logo_3.svg';
+
+// A estilização das msg está no arquivo _layouts/auth/styles.js
+const schemaYup = Yup.object().shape({
+  email: Yup.string()
+    .email('E-mail inválido.')
+    .required('O e-mail é obrigatório'),
+  password: Yup.string()
+    .min(6, 'A senha precisa ter no mínimo 6 caracteres.')
+    .required('A senha é obrigatória'),
+});
 
 export default function SignIn() {
   function handleSubmit(data) {
@@ -10,7 +21,7 @@ export default function SignIn() {
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
+      <Form schema={schemaYup} onSubmit={handleSubmit}>
         <img
           src={logo}
           alt="BR Barber"

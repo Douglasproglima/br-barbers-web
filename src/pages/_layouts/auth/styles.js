@@ -37,10 +37,19 @@ export const Content = styled.div`
       }
     }
 
+    span {
+      color: #06b1e88c;
+      font-size: 14px;
+      align-self: flex-start;
+      margin: 0 0 10px;
+      font-weight: bold;
+    }
+
     button {
       margin: 5px 0 0;
       height: 40px;
-      background: #d84e00;
+      /* background: #d84e00; */
+      background: linear-gradient(to right, #EB3349 0%, #F45C43 51%, #EB3349 100%);
       font-weight: bold;
       color: #ffffff;
       border: 0;
@@ -49,11 +58,13 @@ export const Content = styled.div`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(0.05, '#d84e00')};
+        /* background: ${darken(0.05, '#d84e00')}; */
+        background: linear-gradient(to right, #EB3349 0%, #F45C43 55%, #EB3349 100%);
+        background-position: right center;
       }
-    }
+  }
 
-    > a {
+  a {
       text-decoration: none;
       font-size: 16px;
       margin-top: 15px;
@@ -66,5 +77,4 @@ export const Content = styled.div`
         opacity: 1;
       }
     }
-  }
 `;
