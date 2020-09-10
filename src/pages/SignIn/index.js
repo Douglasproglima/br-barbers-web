@@ -1,10 +1,10 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
-import { signInRequest } from '~/store/modules/auth/actions';
+import { useDispatch } from 'react-redux';
 import logo from '~/assets/logo.svg';
+import { signInRequest } from '~/store/modules/auth/actions';
 
 // A estilização das msg está no arquivo _layouts/auth/styles.js
 const schemaYup = Yup.object().shape({
