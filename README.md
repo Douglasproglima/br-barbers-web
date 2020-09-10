@@ -1,5 +1,5 @@
 <div align="center" style="margin-bottom: 20px;">
-<img alt="gobarber" src="./others/images/logo.png" width="auto" heigth="auto"/>
+<img alt="br-baber-web" src="./others/images/logo.png" width="auto" heigth="auto"/>
 </div>
 
 ## :br-barber: O projeto
@@ -33,7 +33,7 @@ O projeto foi feito com as seguintes tecnologias:
 #### Clonando o projeto
 ```sh
 $ git clone https://github.com/Douglasproglima/br-barbers-web.git
-$ cd gobarber
+$ cd brbarberweb
 ```
 #### Iniciando a API
 ```sh

@@ -9,7 +9,7 @@ const middlewares = [];
 const sagaMonitor =
   process.env.NODE_ENV === 'development'
     ? console.tron.createSagaMonitor()
-    : null;
+    : console.tron.log('ERRO');
 
 const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 
