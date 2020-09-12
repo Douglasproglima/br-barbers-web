@@ -7,14 +7,14 @@ export const Form = styled.form`
 
   input {
     flex: 1;
-    border: 1px solid #eee;
+    border: 1px solid #f47b00;
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 14px;
   }
 `;
 
-//Animação para girar o ícone de loader
+// Animação para girar o ícone de loader
 const rotate = keyframes`
   from {
     transfom: rotate(0deg);
@@ -24,11 +24,11 @@ const rotate = keyframes`
   }
 `;
 
-export const SumitButton = styled.button.attrs((props) => ({
+export const SumitButton = styled.button.attrs(props => ({
   type: 'submit',
   disabled: props.loading,
 }))`
-  background: #f47b00;
+  background: #191920e8;
   border: 0;
   padding: 0 15px;
   margin-left: 8px;
@@ -43,7 +43,7 @@ export const SumitButton = styled.button.attrs((props) => ({
     opacity: 0.6;
   }
 
-  ${(props) =>
+  ${props =>
     props.loading &&
     css`
       svg {
@@ -52,7 +52,7 @@ export const SumitButton = styled.button.attrs((props) => ({
     `}
 `;
 
-export const List =  styled.ul`
+export const List = styled.ul`
   list-style: 15px 0;
   margin-top: 30px;
 
@@ -73,8 +73,6 @@ export const List =  styled.ul`
       color: #f3f3f3d9;
       text-decoration: none;
     }
-
-
   }
 
   li:hover {
