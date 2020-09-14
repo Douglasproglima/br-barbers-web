@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MdNotifications } from 'react-icons/md';
 import {
   Container,
@@ -9,13 +9,19 @@ import {
 } from './styles';
 
 export default function Notifications() {
+  const [visible, setVisible] = useState(false);
+
+  function handleToggleVisible() {
+    setVisible(!visible);
+  }
+
   return (
     <Container>
-      <Badge hasUnread>
+      <Badge hasUnread onClick={handleToggleVisible}>
         <MdNotifications color="#f47b00" size={20} />
       </Badge>
 
-      <NotificationList>
+      <NotificationList visible={visible}>
         <Scroll>
           <Notification unread>
             <p>Você possui um novo agendamento. Verifique!</p>
