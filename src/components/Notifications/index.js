@@ -55,7 +55,7 @@ export default function Notifications() {
 
   return (
     <Container>
-      <Badge hasUnread onClick={handleToggleVisible}>
+      <Badge hasUnread={hasUnread} onClick={handleToggleVisible}>
         <MdNotifications color="#f47b00" size={20} />
       </Badge>
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '~/assets/logo_min.svg';
-import Notifications from '~/components/Notifications';
 import { Container, Content, Profile } from './styles';
+import Notifications from '~/components/Notifications';
 
 export default function Header() {
   return (
