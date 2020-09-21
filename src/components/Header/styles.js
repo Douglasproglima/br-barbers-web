@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 65px;
   border-radius: 5px;
   background: #2c2c2c;
-  box-shadow: 0 0 25px rgb(244 123 0 / 40%);
+  box-shadow: 0 0 25px rgb(244 123 0 / 20%);
   padding: 0 30px;
 
   img {
@@ -39,7 +39,7 @@ export const Content = styled.div`
 
     a {
       font-weight: bold;
-      color: #f47b00;
+      color: #a8a8ff;
       &:hover {
         opacity: 0.6;
       }
@@ -71,7 +71,7 @@ export const Profile = styled.div`
       display: block;
       margin-top: 2px;
       font-size: 12px;
-      color: #f47b00;
+      color: #a8a8ff;
       &:hover {
         opacity: 0.6;
       }

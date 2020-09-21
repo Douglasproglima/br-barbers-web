@@ -30,8 +30,6 @@ export default function Profile() {
 
         <button type="submit">Atualizar perfil</button>
       </Form>
-
-      <button type="submit">Sair do Br.Barber</button>
     </Container>
   );
 }

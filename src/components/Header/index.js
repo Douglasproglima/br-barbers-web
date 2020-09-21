@@ -10,7 +10,7 @@ export default function Header() {
       <Content>
         <nav>
           <img src={logo} alt="Br Barber" />
-          <Link to="/dashboard">DASHBOARD</Link>
+          {/* <Link to="/dashboard">DASHBOARD</Link> */}
         </nav>
 
         <aside>
@@ -19,6 +19,7 @@ export default function Header() {
             <div>
               <strong>Douglas Lima</strong>
               <Link to="/profile">Perfil</Link>
+              <Link to="/">Sair</Link>
             </div>
             <img
               src="https://api.adorable.io/avatars/50/abott@adorable.png"

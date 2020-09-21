@@ -2,53 +2,66 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.div`
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
   form {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    padding: 30px;
+    width: 100%;
     input {
-      background: #eeeeee;
+      background-color: #404954;
+      background-clip: padding-box;
+      border-color: #727cf5;
+      border: 50px #727cf5;
+      box-shadow: 0 0 25px rgba(114 124 245 / 20%);
       border: 0;
       border-radius: 4px;
       height: 44px;
+      width: 100%;
       padding: 15px;
-      color: #000;
+      color: #e3eaef;
       margin: 0 0 10px;
       &::placeholder {
-        color: #424242;
+        color: #dbd9ff;
       }
     }
     hr {
       border: 0;
-      height: 1px;
-      background: #f47b00;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        #727cf5 25%,
+        #a8a8ff 51%,
+        #727cf5 100%
+      );
       margin: 10px 0 20px;
+      &:hover {
+        background: ${darken(0.05, '#a8a8ff')};
+      }
     }
     span {
-      color: #fb6f91;
+      color: #727cf5;
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
     }
+
     button {
       margin: 5px 0 0;
       height: 44px;
-      background: linear-gradient(
-        to right,
-        #eb3349 0%,
-        #f45c43 51%,
-        #eb3349 100%
-      );
+      box-shadow: 0 0 25px rgba(114 124 245 / 20%);
+      background: #727cf5;
       font-weight: bold;
       color: #fff;
       border: 0;
       border-radius: 4px;
       font-size: 16px;
-      transition: background 0.2s;
+      transition: background 0.5s;
       &:hover {
-        background: ${darken(0.05, '#eb3349')};
+        background: ${darken(0.05, '#727cf5')};
+        transition: background 0.5s;
       }
     }
     a {
@@ -61,11 +74,12 @@ export const Container = styled.div`
       }
     }
   }
+
   > button {
-    width: 100%;
-    margin: 10px 0 0;
+    width: 88%;
+    margin: 0 30px 0;
     height: 44px;
-    background: #f64c75;
+    background: #a8a8ff;
     font-weight: bold;
     color: #fff;
     border: 0;
@@ -73,7 +87,7 @@ export const Container = styled.div`
     font-size: 16px;
     transition: background 0.2s;
     &:hover {
-      background: ${darken(0.08, '#f64c75')};
+      background: ${darken(0.08, '#A8A8FF')};
     }
   }
 `;
