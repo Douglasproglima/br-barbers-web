@@ -9,8 +9,9 @@ export default function Header() {
     <Container>
       <Content>
         <nav>
-          <img src={logo} alt="Br Barber" />
-          {/* <Link to="/dashboard">DASHBOARD</Link> */}
+          <Link to="/dashboard">
+            <img src={logo} alt="Br Barber" />
+          </Link>
         </nav>
 
         <aside>
