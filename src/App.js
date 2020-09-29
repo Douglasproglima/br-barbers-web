@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -8,30 +9,42 @@ import Routes from './routes';
 import history from './services/history';
 import { store, persistor } from './store';
 import GlobalStyle from './styles/global';
+import ThemeSwitcher from '~/components/ThemeSwitcher';
+import light from '~/styles/themes/light';
+import dark from '~/styles/themes/dark';
 
 function App() {
+  const [theme, setTheme] = useState(light);
+
+  const toggleTheme = () => {
+    setTheme(theme.title === 'dark' ? light : dark);
+  };
+
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <Router history={history}>
-          <Routes />
-          <GlobalStyle />
-          <ToastContainer
-          className="toast-container"
-          position="top-center"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnHover={false}
-          draggable={true}
-          progress={undefined}
-          transition={Flip}
-        />
-        </Router>
-      </PersistGate>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <Router history={history}>
+            <ThemeSwitcher toggleTheme={toggleTheme} />
+            <Routes />
+            <GlobalStyle />
+            <ToastContainer
+              className="toast-container"
+              position="top-center"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnHover={false}
+              draggable
+              progress={undefined}
+              transition={Flip}
+            />
+          </Router>
+        </PersistGate>
+      </Provider>
+    </ThemeProvider>
   );
 }
 

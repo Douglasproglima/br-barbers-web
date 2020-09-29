@@ -1,16 +1,36 @@
-  
 import logo from '../../assets/logo.svg';
 
 export default {
   title: 'dark',
-  logo: logo,
+  logo,
 
   colors: {
     primary: 'linear-gradient(90deg, #000000 0%, #312e38 100%)',
-    secundary: 'linear-gradient(270deg, #FFE53B 0%, #FF2525 100%)',
+    secundary: '#a8a8ff',
 
-    background: linear-gradient(-45deg, #191920e8, #2c2c2c, #2c2c2c, #191920e8);
-    li: '#232129',
+    header: {
+      background: '#2c2c2c',
+      box_shadow: 'rgb(244 123 0 / 20%)',
+      text: '#a8a8ff',
+      text_strong: '#FFFFFF',
+    },
+
+    hr: {
+      primary: '#727cf5',
+      secundary: '#a8a8ff',
+    },
+
+    li: {
+      background: '#363633',
+      strong_true: '#09e36f',
+      strong_false: '#ff5240',
+      span_true: '#727cf5',
+      span_false: '#ffffff',
+    },
+
+    color: '#f47b00',
+    background:
+      'linear-gradient(-45deg, #191920e8, #2c2c2c, #2c2c2c, #191920e8)',
     text: '#FFFFFF',
     inputColor: '#f4ede8',
     inputPlaceholder: '#666360',
@@ -20,4 +40,4 @@ export default {
     dayAvailableBackground: '#3e3b47',
     dayAvailableBackgroundHover: '#2f2c35',
   },
-}
+};

@@ -4,8 +4,8 @@ export const Container = styled.div`
   max-width: 100%;
   height: 65px;
   border-radius: 5px;
-  background: #2c2c2c;
-  box-shadow: 0 0 25px rgb(244 123 0 / 20%);
+  background: '${props => props.theme.colors.header.secundary}';
+  box-shadow: 0 0 25px rgb(244 123 0 / 40%);
   padding: 0 30px;
 
   img {
@@ -31,7 +31,7 @@ export const Content = styled.div`
       height: 35px;
       margin-right: 20px;
       padding-right: 20px;
-      border-right: 1px solid #eeeeee;
+      border-right: 1px solid ${props => props.theme.colors.secundary};
       &:hover {
         opacity: 0.6;
       }
@@ -39,7 +39,8 @@ export const Content = styled.div`
 
     a {
       font-weight: bold;
-      color: #a8a8ff;
+      color: ${props => props.theme.colors.text};
+      /* color: #a8a8ff; */
       &:hover {
         opacity: 0.6;
       }
@@ -56,7 +57,7 @@ export const Profile = styled.div`
   display: flex;
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid ${props => props.theme.colors.header.text};
 
   div {
     text-align: right;
@@ -64,14 +65,14 @@ export const Profile = styled.div`
 
     strong {
       display: block;
-      color: #ffffff;
+      color: ${props => props.theme.colors.header.text_strong};
     }
 
     a {
       display: block;
       margin-top: 2px;
       font-size: 12px;
-      color: #a8a8ff;
+      color: ${props => props.theme.colors.header.text};
       &:hover {
         opacity: 0.6;
       }

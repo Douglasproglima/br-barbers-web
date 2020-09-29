@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   height: 100%;
   background: linear-gradient(-145deg, #424249, #ff8039, #424249) no-repeat
     center;
-  /* background: #424249 no-repeat center; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +47,6 @@ export const Content = styled.div`
     button {
       margin: 5px 0 0;
       height: 40px;
-      /* background: #d84e00; */
       background: linear-gradient(to right, #EB3349 0%, #F45C43 51%, #EB3349 100%);
       font-weight: bold;
       color: #ffffff;

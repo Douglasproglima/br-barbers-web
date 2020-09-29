@@ -14,7 +14,7 @@ export const Container = styled.div`
       border-radius: 50%;
       box-shadow: 0 0 25px rgba(114 124 245 / 40%);
       border: 3px solid rgba(255, 255, 255, 0.3);
-      background: #727cf5;
+      background: ${props => props.theme.colors.secundary};
     }
     input {
       display: none;

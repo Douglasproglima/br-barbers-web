@@ -11,20 +11,20 @@ export const Container = styled.div`
     padding: 30px;
     width: 100%;
     input {
-      background-color: #404954;
+      background-color: ${props => props.theme.colors.inputPlaceholder};
       background-clip: padding-box;
-      border-color: #727cf5;
-      border: 50px #727cf5;
+      border-color: ${props => darken(0.1, props.theme.colors.secundary)};
+      border: 50px ${props => props.theme.colors.secundary};
       box-shadow: 0 0 25px rgba(114 124 245 / 20%);
       border: 0;
       border-radius: 4px;
       height: 44px;
       width: 100%;
       padding: 15px;
-      color: #e3eaef;
+      color: ${props => props.theme.colors.inputColor};
       margin: 0 0 10px;
       &::placeholder {
-        color: #dbd9ff;
+        color: ${props => props.theme.colors.inputColor};
       }
       img {
         padding: 10px;
@@ -35,17 +35,17 @@ export const Container = styled.div`
       height: 2px;
       background: linear-gradient(
         to right,
-        #727cf5 25%,
-        #a8a8ff 51%,
-        #727cf5 100%
+        ${props => props.theme.colors.hr.primary} 25%,
+        ${props => props.theme.colors.hr.secundary} 51%,
+        ${props => props.theme.colors.hr.primary} 100%
       );
       margin: 10px 0 20px;
       &:hover {
-        background: ${darken(0.05, '#a8a8ff')};
+        background: ${props => darken(0.1, props.theme.colors.hr.secundary)};
       }
     }
     span {
-      color: #727cf5;
+      color: ${props => darken(0.1, props.theme.colors.hr.secundary)};
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
@@ -55,7 +55,7 @@ export const Container = styled.div`
       margin: 5px 0 0;
       height: 44px;
       box-shadow: 0 0 25px rgba(114 124 245 / 20%);
-      background: #727cf5;
+      background: ${props => props.theme.colors.hr.secundary};
       font-weight: bold;
       color: #fff;
       border: 0;
@@ -63,7 +63,7 @@ export const Container = styled.div`
       font-size: 16px;
       transition: background 0.5s;
       &:hover {
-        background: ${darken(0.05, '#727cf5')};
+        background: ${props => darken(0.1, props.theme.colors.hr.secundary)};
         transition: background 0.5s;
       }
     }
@@ -82,7 +82,7 @@ export const Container = styled.div`
     width: 88%;
     margin: 0 30px 0;
     height: 44px;
-    background: #a8a8ff;
+    background: ${props => props.theme.colors.hr.secundary};
     font-weight: bold;
     color: #fff;
     border: 0;
@@ -90,7 +90,7 @@ export const Container = styled.div`
     font-size: 16px;
     transition: background 0.2s;
     &:hover {
-      background: ${darken(0.08, '#A8A8FF')};
+      background: ${props => darken(0.1, props.theme.colors.hr.secundary)};
     }
   }
 `;

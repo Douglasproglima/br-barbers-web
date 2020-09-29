@@ -21,12 +21,12 @@ export default createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(-45deg, #191920e8, #2c2c2c, #2c2c2c, #191920e8);
+    background: ${props => props.theme.colors.background};
     -webkit-font-smoothing: antialiased !important;
   }
 
   body, input, button {
-    color: #ffffff;
+    color: ${props => props.theme.colors.inputColor};
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
   }
