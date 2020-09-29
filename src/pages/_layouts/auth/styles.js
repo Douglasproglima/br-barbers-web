@@ -66,8 +66,8 @@ export const Content = styled.div`
 
   a {
       text-decoration: none;
-      font-size: 16px;
-      margin-top: 15px;
+      font-size: 14px;
+      margin-top: 50px;
       font-weight: bold;
       color: #ffffff;
       opacity: 0.8;

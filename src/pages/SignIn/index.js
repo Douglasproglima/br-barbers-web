@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
+import { MdNotifications } from 'react-icons/md';
 import logo from '~/assets/logo.svg';
 
 import { signInRequest } from '~/store/modules/auth/actions';
@@ -38,6 +39,7 @@ export default function SignIn() {
             marginBottom: -90,
           }}
         />
+
         <Input name="email" type="email" placeholder="Informe o seu e-mail" />
         <Input
           name="password"
@@ -46,7 +48,7 @@ export default function SignIn() {
         />
 
         <button type="submit">{loading ? 'Carregando...' : 'Entrar'}</button>
-        <Link to="/register">Crie uma conta gratuita</Link>
+        <Link to="/register">Ainda não possui conta? Cadastre-se</Link>
       </Form>
     </>
   );

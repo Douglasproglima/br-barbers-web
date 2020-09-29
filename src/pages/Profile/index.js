@@ -1,6 +1,8 @@
 import React from 'react';
 import { Form, Input } from '@rocketseat/unform';
 import { useSelector, useDispatch } from 'react-redux';
+import { FaRegUserCircle, FaLock } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import { Container } from './styles';
 import AvatarInput from './AvatarInput';
 

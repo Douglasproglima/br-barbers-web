@@ -26,6 +26,9 @@ export const Container = styled.div`
       &::placeholder {
         color: #dbd9ff;
       }
+      img {
+        padding: 10px;
+      }
     }
     hr {
       border: 0;
