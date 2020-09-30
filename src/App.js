@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ToastContainer, Flip } from 'react-toastify';
+import usePersistedStateTheme from './utils/usePersistedStateTheme';
 import './config/ReactotronConfig';
 import Routes from './routes';
 import history from './services/history';
@@ -14,7 +15,7 @@ import light from '~/styles/themes/light';
 import dark from '~/styles/themes/dark';
 
 function App() {
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = usePersistedStateTheme('theme', light);
 
   const toggleTheme = () => {
     setTheme(theme.title === 'dark' ? light : dark);

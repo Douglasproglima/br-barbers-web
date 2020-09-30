@@ -14,7 +14,7 @@ export const Container = styled.div`
     button {
       border: 0;
       background: none;
-      color: ${props => props.theme.colors.header.text};
+      color: ${props => props.theme.colors.color};
     }
     strong {
       color: ${props => props.theme.colors.color};
@@ -55,6 +55,7 @@ export const Time = styled.li`
   padding: 20px;
   border-radius: 4px;
   background: ${props => props.theme.colors.li.background};
+  border-color: ${props => props.theme.colors.li.border_color};
   box-shadow: 0 0 25px rgb(114 124 245 / 10%);
   opacity: ${props => (props.past ? 0.6 : 1)};
 
@@ -78,7 +79,7 @@ export const Time = styled.li`
     display: block;
     color: ${props =>
       props.available
-        ? props.theme.colors.li.strong_true
+        ? props.theme.colors.li.text
         : props.theme.colors.li.strong_false};
     font-size: 20px;
     font-weight: bold;

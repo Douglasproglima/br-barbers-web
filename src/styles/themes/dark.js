@@ -22,6 +22,7 @@ export default {
 
     li: {
       background: '#363633',
+      border_color: '#ff9000',
       strong_true: '#09e36f',
       strong_false: '#ff5240',
       span_true: '#727cf5',

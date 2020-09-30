@@ -21,11 +21,12 @@ export default {
     },
 
     li: {
-      background: '#ff9000',
-      strong_true: '#727cf5',
+      background: '#E5E5E5',
+      border_color: '#ff9000',
+      strong_true: '#7DDE92',
       strong_false: '#ff5240',
-      span_true: '#727cf5',
-      span_false: '#ffffff',
+      span_true: '#058C42',
+      span_false: '#020202',
     },
 
     color: '#f47b00',

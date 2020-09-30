@@ -61,11 +61,11 @@ export default function Dashboard() {
     <Container>
       <header>
         <button type="button" onClick={() => handleDay(false)}>
-          <MdChevronLeft size={36} color="FFF" />
+          <MdChevronLeft size={36} color={props => props.theme.colors.color} />
         </button>
         <strong>{dateFormatted}</strong>
         <button type="button" onClick={() => handleDay(true)}>
-          <MdChevronRight size={36} color="FFF" />
+          <MdChevronRight size={36} color={props => props.theme.colors.color} />
         </button>
       </header>
 
